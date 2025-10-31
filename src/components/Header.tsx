@@ -31,16 +31,19 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div
-            className="flex items-center space-x-2 rtl:space-x-reverse"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-white">T</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Toorrii</span>
-          </motion.div>
+          <Link to="/">
+            <motion.div
+              className="flex items-center space-x-2 rtl:space-x-reverse"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <img 
+                src="/toorrii-logo.jpg" 
+                alt="Toorrii Logo" 
+                className="h-10 w-auto object-contain"
+              />
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse">

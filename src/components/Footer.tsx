@@ -77,7 +77,7 @@ const Footer = () => {
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  className="w-10 h-10 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-colors"
+                  className="w-10 h-10 bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-colors"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}

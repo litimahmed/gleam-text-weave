@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Users, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Users, Calendar, Clock } from "lucide-react";
 import { useTranslation } from "@/contexts/TranslationContext";
 import homepage_banner from "@/assets/homepage_banner.svg";
 
@@ -21,10 +21,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-accent/50 backdrop-blur-sm rounded-full px-4 py-2 border border-primary/20"
+              className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-secondary backdrop-blur-sm rounded-full px-4 py-2"
             >
-              <Star className="w-4 h-4 text-primary fill-primary" />
-              <span className="text-sm font-medium text-accent-foreground">
+              <span className="text-sm font-medium text-secondary-foreground">
                 {t("hero.trusted")}
               </span>
             </motion.div>

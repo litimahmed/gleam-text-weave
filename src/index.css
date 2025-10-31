@@ -17,54 +17,50 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    /* Brand colors from Toorrii logo */
-    --primary: 300 100% 50%;
+    --primary: 320 75% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 300 100% 60%;
-    --primary-dark: 300 100% 40%;
+    --primary-light: 320 75% 65%;
+    --primary-dark: 320 75% 45%;
 
-    /* Lime green from logo */
-    --secondary: 88 48% 48%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 78 65% 55%;
+    --secondary-foreground: 0 0% 15%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    /* Orange from logo */
-    --accent: 30 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Success green (slightly different from secondary for positive states) */
-    --success: 88 48% 48%;
+    --success: 140 65% 45%;
     --success-foreground: 0 0% 100%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 300 100% 50%;
+    --ring: 320 75% 55%;
 
-    /* Custom brand gradients - Magenta to Orange from logo */
-    --gradient-primary: linear-gradient(135deg, hsl(300, 100%, 50%), hsl(30, 100%, 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(300, 100%, 50%) 0%, hsl(30, 100%, 50%) 100%);
+    /* Custom brand gradients - Magenta to Orange */
+    --gradient-primary: linear-gradient(135deg, hsl(320, 75%, 55%), hsl(25, 95%, 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(320, 75%, 55%) 0%, hsl(25, 95%, 60%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 100%) 100%);
     
-    /* Shadows with brand colors */
-    --shadow-elegant: 0 10px 40px -10px hsl(300 100% 50% / 0.25);
-    --shadow-glow: 0 0 60px hsl(300 100% 50% / 0.35);
-    --shadow-card: 0 4px 20px hsl(300 100% 50% / 0.12);
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(320 75% 55% / 0.25);
+    --shadow-glow: 0 0 60px hsl(320 75% 55% / 0.35);
+    --shadow-card: 0 4px 20px hsl(320 75% 55% / 0.12);
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 0 0% 15%;
-    --sidebar-primary: 300 100% 50%;
+    --sidebar-primary: 320 75% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 96%;
     --sidebar-accent-foreground: 0 0% 15%;
     --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 300 100% 50%;
+    --sidebar-ring: 320 75% 55%;
   }
 }
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, TrendingUp } from "lucide-react";
+import { ArrowRight, Star, Users, Calendar, Clock } from "lucide-react";
 import { useTranslation } from "@/contexts/TranslationContext";
 import homepage_banner from "@/assets/homepage_banner.svg";
 
@@ -21,7 +21,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-accent/50 backdrop-blur-sm rounded-full px-4 py-2 border border-primary/20"
+              className="inline-flex items-center space-x-2 rtl:space-x-reverse bg-accent/50 backdrop-blur-sm rounded-full px-4 py-2 border border-primary/20"
             >
               <Star className="w-4 h-4 text-primary fill-primary" />
               <span className="text-sm font-medium text-accent-foreground">
@@ -55,10 +55,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group shadow-glow">
                 {t("hero.cta")}
                 <motion.div
-                  className="ml-2"
+                  className={`${t("hero.cta").length > 20 ? 'mr-2 rtl:ml-2 rtl:mr-0' : 'ml-2 rtl:mr-2 rtl:ml-0'}`}
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -71,20 +71,33 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="flex items-center space-x-8 pt-4"
+              className="grid grid-cols-3 gap-6 pt-8"
             >
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">40%</span>{" "}
-                  {t("hero.reduction")}
+              <div className="flex flex-col items-start space-y-1">
+                <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                  <Users className="w-5 h-5 text-primary" />
+                  <span className="text-2xl font-bold text-foreground">25K+</span>
+                </div>
+                <span className="text-xs text-muted-foreground">
+                  {t("hero.stat1")}
                 </span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Star className="w-5 h-5 text-primary fill-primary" />
-                <span className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">4.9/5</span>{" "}
-                  {t("hero.rating")}
+              <div className="flex flex-col items-start space-y-1">
+                <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                  <Calendar className="w-5 h-5 text-secondary" />
+                  <span className="text-2xl font-bold text-foreground">500+</span>
+                </div>
+                <span className="text-xs text-muted-foreground">
+                  {t("hero.stat2")}
+                </span>
+              </div>
+              <div className="flex flex-col items-start space-y-1">
+                <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                  <Clock className="w-5 h-5 text-success" />
+                  <span className="text-2xl font-bold text-foreground">45min</span>
+                </div>
+                <span className="text-xs text-muted-foreground">
+                  {t("hero.stat3")}
                 </span>
               </div>
             </motion.div>

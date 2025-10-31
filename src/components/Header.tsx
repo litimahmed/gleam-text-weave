@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Calendar, Menu, X } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Menu, LogIn, Users } from "lucide-react";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -33,18 +32,18 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 rtl:space-x-reverse"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Calendar className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <span className="text-xl font-bold text-white">T</span>
             </div>
             <span className="text-xl font-bold text-foreground">Toorrii</span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8 rtl:space-x-reverse">
             {navItems.map((item, index) => (
               <motion.div key={item.name}>
                 <Link
@@ -62,7 +61,7 @@ const Header = () => {
                     {item.name}
                   </motion.span>
                   <motion.div
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary"
+                    className="absolute -bottom-1 ltr:left-0 rtl:right-0 w-0 h-0.5 bg-primary"
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
                   />
@@ -72,19 +71,18 @@ const Header = () => {
           </nav>
 
           <motion.div
-            className="flex items-center space-x-4"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="flex items-center space-x-2">
-              <ThemeToggle />
-              <LanguageToggle />
-            </div>
-            <Button variant="ghost" className="hidden sm:inline-flex">
+            <LanguageToggle />
+            <Button variant="secondary" size="lg" className="hidden sm:inline-flex gap-2 font-semibold">
+              <Users className="w-4 h-4" />
               {t('nav.clientPortal')}
             </Button>
-            <Button variant="cta" size="lg" className="hidden lg:inline-flex">
+            <Button variant="default" size="lg" className="hidden lg:inline-flex gap-2 font-semibold shadow-elegant">
+              <LogIn className="w-4 h-4" />
               {t('nav.signin')}
             </Button>
 
@@ -108,10 +106,12 @@ const Header = () => {
                     </Link>
                   ))}
                   <div className="pt-6 border-t border-border space-y-4">
-                    <Button variant="ghost" className="w-full justify-start">
+                    <Button variant="secondary" className="w-full justify-start gap-2 font-semibold">
+                      <Users className="w-4 h-4" />
                       {t('nav.clientPortal')}
                     </Button>
-                    <Button variant="cta" size="lg" className="w-full">
+                    <Button variant="default" size="lg" className="w-full gap-2 font-semibold shadow-elegant">
+                      <LogIn className="w-4 h-4" />
                       {t('nav.signin')}
                     </Button>
                   </div>
